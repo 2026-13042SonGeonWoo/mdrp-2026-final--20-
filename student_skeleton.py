@@ -328,8 +328,8 @@ def detect_line(rectified):
 
     h, w = rectified.shape[:2]
 
-    gray = cv2.cvtColor(rectified, cv2.COLOR_RGB2GRAY)
-    hsv = cv2.cvtColor(rectified, cv2.COLOR_RGB2HSV)
+    gray = cv2.cvtColor(rectified, cv2.COLOR_BGR2GRAY)
+    hsv = cv2.cvtColor(rectified, cv2.COLOR_BGR2HSV)
 
     # 모니터 테두리를 line으로 착각하지 않도록 내부만 사용
     margin = max(3, int(min(h, w) * 0.08))
